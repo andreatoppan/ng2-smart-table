@@ -130,6 +130,39 @@ And pass the data to the table:
 
 Now you have some data in the table.
  
+## Using infinite scroll
+In order to activate the infinite scroll inside the table body you will have to enable it inside the settings using the parameter **infiniteScrollEnabled**
+The following parameters could be used to customize the appearance:
+
+  * infiniteScrollEnabled: if set to **true** it will enable the infinite scroll
+  * itemSize: optional, default = 10
+  * infiniteScrollClass: optional, can be use to specify a different class for the body, useful if you want to define the height of the body.
+
+```
+settings = {
+   infiniteScrollEnabled: true,
+   itemSize: 10,
+   infiniteScrollClass: 'custom-class-to-define-height',
+   ...
+   columns: {
+    id: {
+      title: 'ID'
+    },
+    name: {
+      title: 'Full Name'
+    },
+    username: {
+      title: 'User Name'
+    },
+    email: {
+      title: 'Email'
+    }
+  }
+};
+```
+
+
+
 ## Further Documentation
 Installation, customization and other useful articles: https://akveo.github.io/ng2-smart-table/
 
